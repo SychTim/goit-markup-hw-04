@@ -166,7 +166,8 @@ img {
     color: var(--color-h1);
     background-color: var(--accent);
 }
-.hero button:hover{
+.hero button:hover,
+.hero button:focus {
     cursor: pointer;
 }
 
@@ -211,8 +212,7 @@ img {
 .section.what-are-we-doing {
     padding-top: 0;
 }
-.what-are-we-doing h2,
-.team h2 {
+.title {
     font-size: 36px;
     line-height: 1.16;
     letter-spacing: 0.03em;
@@ -283,16 +283,45 @@ img {
     height: 44px;
     border-radius: 50%;
 }
-.social-media:hover{
+.social-media:hover,
+.social-media:focus {
     color: #FFFFFF;
     background-color: #2196F3;
 }
-
+/* -------------------клиенты--------------------- */
+.clients {
+    display: flex;
+}
+.clients :not(:last-child){
+    margin-right: 30px;
+}
+.clients a {
+    display: block;
+    width: 170px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    border: 1px solid rgba(175, 177, 184, 1);
+    border-radius: 4px;
+    color: rgba(175, 177, 184, 1);
+}
+.clients a:hover,
+.clients a:focus {
+    color: var(--accent);
+    border-color: var(--accent);
+}
 /* --------------------футер----------------------- */
 .footer {
     background-color: #2F303A; /* временно */
     padding-top: 60px;
     padding-bottom: 60px;
+}
+.footer>.container{
+    display: flex;
+}
+.footer-block-1{
+    margin-right: 70px;
 }
 .address {
     margin-top: 20px;
@@ -311,6 +340,38 @@ img {
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+}
+.footer-block-2 {
+    padding-top: 12px;
+}
+.footer-text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-h1);
+    margin-bottom: 20px;
+}
+.footer-media-list{
+    display: flex;
+}
+.footer-media-list li:not(:last-child){
+    margin-right: 10px;
+}
+.footer-media {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--color-h1);
+    background-color: rgba(255,255,255,0.1);
+}
+.footer-media:hover,
+.footer-media:focus {
+    background-color: var(--accent);
 }
 
 
@@ -341,6 +402,8 @@ img {
     color: var(--color-h1);
     background-color: var(--accent);
     cursor: pointer;
+    box-shadow:  0px 2px 2px 0 rgba(0, 0, 0, 0.12), 
+                 0px 1px 2px 0 rgba(0, 0, 0, 0.08);
 }
 .list.cards {
     display: flex;
@@ -350,6 +413,11 @@ img {
     width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
+}
+.card :hover,
+.card :focus {
+    box-shadow: 1px 4px 6px  rgba(0, 0, 0, 0.16),
+                0px 1px 4px rgba(0, 0, 0, 0.06);
 }
 .card:nth-child(3n) {
     margin-right: 0;
