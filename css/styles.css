@@ -414,8 +414,11 @@ img {
     margin-right: 30px;
     margin-bottom: 30px;
 }
-.card :hover,
-.card :focus {
+.card-link {
+    display: block;
+}
+.card-link:hover,
+.card-link:focus {
     box-shadow: 1px 4px 6px  rgba(0, 0, 0, 0.16),
                 0px 1px 4px rgba(0, 0, 0, 0.06);
 }
